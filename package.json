@@ -1,7 +1,7 @@
 {
-  "name": "softbankdemo2",
+  "name": "o2odemo-en",
   "version": "1.0.0",
-  "description": "Soft Bank O2O",
+  "description": "O2O English Demo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,6 @@
     "build:prod": "webpack -p"
   },
   "keywords": [
-    "softbank",
     "o2o"
   ],
   "author": "yk",
