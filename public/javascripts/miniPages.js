@@ -13,7 +13,7 @@ class miniPages {
 		for (var p = 0; p < pages.length; p++) {
 			pages[p].style.position = 'absolute';
 			pages[p].style.width = '100%';
-			pages[p].style.height = '100%';
+			// pages[p].style.height = '100%';
 			pages[p].style.display = 'none';
 			this.pages.push(pages[p].id);
 		}

@@ -7,8 +7,9 @@
 </head>
 <body>    
   <header>
-  	<div class="banner">
-      <img src="images/header-main.jpg" />
+  	<div class="banner" id="banner" style="display: none;">
+  		<!-- <div class="banner" id="banner"> -->
+      <img src="images/header-main-2.png" />
   	</div>
   </header>
 
@@ -45,21 +46,25 @@ Please check your email and click on the link to complete your registration.
   </div>
   
   <div id="page-wrapper">
-  	<div id="loadingPage" class="page">
+  	<div id="loadingPage" class="page" style="height: 500px;">
 	    <div class="loading-block">
 	      <br>LOADING
 	    </div>
 	  </div>
 	  <div id="regPage" class="page">
-	    <div class="msg-wrapper">
-			Payday Treat Campaign
-	      <br><br><br>
-	      Please register using one of the method below
+	  	<img src="images/banner.png" id="mainBanner" />
+	    <div class="msg-wrapper" style="margin-top: -10px;">
+			<div class="big">PayDay Treat!<br>Buy 1 Get 1 Free</div>
+		    Please register using one of the method below
 	    </div>
 	    <div id="regButtons">
-	      <button class="registerBtn modalOpener shadow-1" id="regEmail" data-target="regModal">Email</button>
+	      <button class="modalOpener shadow-1" id="regEmail" data-target="regModal">
+		    <img src="images/envelope.png" />Email
+		  </button>
 	      <div></div>
-	      <button class="registerBtn shadow-1" id="regTwitter">Twitter</button>
+	      <button class="shadow-1" id="regTwitter">
+		      <img src="images/twitter.png" />Twitter
+		  </button>
 	    </div>
 	    <div class="form-loader" id="regWorking"></div>
 	  </div>
@@ -74,7 +79,7 @@ Please check your email and click on the link to complete your registration.
 	    </div>
 	  </div>
 	  <!-- <div id="introPage" class="page">
-			<img class="intro-image" src="images/calbee.png" />
+			<img class="intro-image" src="images/banner.png" />
 			<div class="tnc-wrapper">	
 		    <div class="info">
 					<strong class="points-title">応募期間</strong>
@@ -266,9 +271,6 @@ I Agree</label>
 	  	<div id="q1" class="pageQuestion">
 	  	</div>
 	  	<div class="pagination-wrapper">
-	      <div class="question-no">
-	        1/6
-	    	</div>
 	      <button id="toQ2" class="pageBtn next-btn saveQuestion" data-question="1" data-target="page2">NEXT <span class="right"></span></button>
 	  	</div>
 	  </div>
@@ -277,9 +279,6 @@ I Agree</label>
 	  	</div>
 	  	<div class="pagination-wrapper">
 	  		<button id="toQ1" class="pageBtn back-btn" data-target="page1">BACK <span class="left"></span></button>
-	      <div class="question-no">
-	        2/6
-	    	</div>
 	      <button id="toQ3" class="pageBtn next-btn saveQuestion" data-question="2" data-target="page3">NEXT <span class="right"></span></button>
 	  	</div>
 	  </div>
@@ -288,9 +287,6 @@ I Agree</label>
 	  	</div>
 	  	<div class="pagination-wrapper">
 	  		<button id="toQ2" class="pageBtn back-btn" data-target="page2">BACK <span class="left"></span></button>
-	      <div class="question-no">
-	        3/6
-	    	</div>
 	      <button id="toQ4" class="pageBtn next-btn saveQuestion" data-question="3" data-target="page4">NEXT <span class="right"></button>
 	  	</div>
 	  </div>
@@ -299,9 +295,6 @@ I Agree</label>
 	  	</div>
 	  	<div class="pagination-wrapper">
 	  		<button id="toQ3" class="pageBtn back-btn" data-target="page3">BACK <span class="left"></span></button>
-	      <div class="question-no">
-	        4/6
-	    	</div>
 	      <button id="toQ5" class="pageBtn next-btn saveQuestion" data-question="4" data-target="page5">NEXT <span class="right"></span></button>
 	  	</div>
 	  </div>
@@ -310,9 +303,6 @@ I Agree</label>
 	  	</div>
 	  	<div class="pagination-wrapper">
 	  		<button id="toQ4" class="pageBtn back-btn" data-target="page4">BACK <span class="left"></span></button>
-	      <div class="question-no">
-	        5/6
-	    	</div>
 	      <button id="toQ6" class="pageBtn next-btn saveQuestion" data-question="5" data-target="page6">NEXT <span class="right"></span></button>
 	  	</div>
 	  </div>
@@ -321,15 +311,20 @@ I Agree</label>
 	  	</div>
 	  	<div class="pagination-wrapper">
 	  		<button id="toQ5" class="pageBtn back-btn" data-target="page5">BACK <span class="left"></span></button>
-	      <div class="question-no">
-	        6/6
-	    	</div>
 	    	<button id="toApply" class="pageBtn next-btn saveQuestion" data-question="6" data-target="applyPage">NEXT <span class="right"></span></button>
 	  	</div>
 	  </div>
 	  <div id="applyPage" class="page">
 	  	<div class="msg-wrapper">
-	      Thank you for your your time in taking the questionnaire.
+		    <div style="border-top: 1px solid #A0A0A0;
+			    border-bottom: 1px solid #A0A0A0;
+			    max-width: 400px;
+			    margin: 10px auto;
+			    padding: 10px;
+			    font-size: 32px;"
+			>
+				Thank You
+			</div>
 		  </div>
 		  <button id="toVideo" class="pageBtn shadow-2" data-target="videoPage">Submit your response</button>
 		  <div class="pagination-wrapper">
@@ -352,7 +347,7 @@ I Agree</label>
 		  </div>
 		  <div id="resultDescription">
 		  </div>
-		  <img id="resultImage" src="images/header-main.jpg" />
+		  <img id="resultImage" src="images/banner.png" />
 		  <div id="resultInstruction">
 		  </div>
 		  <a id="couponLink"><button><div id="couponLoader" class="loader in-btn"></div><span id="getCoupon"><!-- クーポンを受け取る --></span></button></a>

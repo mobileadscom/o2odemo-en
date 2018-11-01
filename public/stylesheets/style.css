@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda|Roboto');
+
 html {
-  height: 100%;
+  /*height: 100%;*/
 }
 
 body {
 	margin: 0px;
   text-align: center;
-  height: 100%;
+  /*height: 100%;*/
   overflow-x: hidden;
-  font-family: Arial;
+  background-image: url('../images/bg.png');
+  font-family: 'Roboto', sans-serif;
 }
 
 div {
@@ -15,8 +18,13 @@ div {
 }
 
 @media( min-width: 1px) {
-  .banner {
-    height: 65px;
+  .banner img {
+    width: 280px
+  }
+
+  #mainBanner {
+    width: 300px;
+    margin-top: 30px;
   }
 
   .terms {
@@ -47,12 +55,16 @@ div {
   }
   
   #page-wrapper {
-    height: calc(100% - 65px);
+    /*height: calc(100% - 65px);*/
   }
 
-  #resultImage, .intro-image {
+  .intro-image {
     width: 90%;
     max-width: 450px;
+  }
+
+  #resultImage {
+    width: 280px;
   }
 
   #resultTitle {
@@ -79,6 +91,15 @@ div {
 }
 
 @media( min-width: 768px) {
+  .banner img {
+    width: 450px
+  }
+
+  #mainBanner {
+    width: 450px;
+    margin-top: 50px;
+  }
+
   .terms {
     height: 400px;
     font-size: 16px;
@@ -106,9 +127,13 @@ div {
     width: 16px;
   }
 
-  #resultImage, .intro-image {
+  .intro-image {
     width: 90%;
     max-width: 600px;
+  }
+
+  #resultImage {
+    width: 350px;
   }
 
   #resultTitle {
@@ -122,12 +147,8 @@ div {
 }
 
 @media( min-width: 996px) {
-  .banner {
-    height: 90px;
-  }
-
   #page-wrapper {
-    height: calc(100% - 90px);
+    /*height: calc(100% - 90px);*/
   }
 }
 
@@ -157,15 +178,11 @@ div {
 
 .banner {
   width: 100%;
-  background-color: #EBEBEB;
   text-align: left;
-  /*background-image: url('../images/header-bg2.jpg');*/
-  background-size: auto 100%;
-  background-repeat: repeat-x;
+  margin-top: 15px;
 }
 
 .banner img {
-  height: 100%;
   display: block;
   margin: auto;
 }
@@ -186,12 +203,21 @@ div {
   font-size: 28px;
   color: #E54C3C;
   font-weight: 600;
+  font-family: 'Merienda', cursive;
 }
 
 .msg-wrapper {
   font-weight: 600;
+  font-family: 'Merienda', cursive;
+  color: #d12527;
   margin-top: 15px;
   padding: 0px 20px;
+  font-size: 16px;
+}
+
+.msg-wrapper .big {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .tnc-wrapper {
@@ -273,16 +299,22 @@ div {
 }
 
 .page .pagination-wrapper button, #toTerms, #startSurvey, #couponLink button {
-  border-radius: 3px;
-  font-size: 1.25em;
-  border: 1px solid #e54c3c;
-  background-color: #e54c3c;
-  color: white;
-  width: 100px;
-  height: 34px;
-  padding: 1px 8px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 120px;
+  padding: 3px 8px;
   transition: all 0.3s;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  font-family: 'Merienda', cursive;
+  margin: 0px 15px;
+  font-weight: 600;
+  outline: none;
+}
+
+#toTerms, #startSurvey, #couponLink button {
+  border: 1px solid #D22527;
+  background-color: #D22527; 
+  color: white;
 }
 
 #startSurvey {
@@ -303,35 +335,36 @@ div {
 }
 
 button.back-btn {
-  text-align: right;
+  /*text-align: center;*/
   position: relative;
+  border: 1px solid #D22527;
+  background-color: white;
+  color: #D22527;
 }
 
 button .left {
   width: 10px;
   height: 10px;
   position: absolute;
-  left: -2px;
-  top: 4px;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
 }
 
 button .left:after {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 23px;
-  border-right: 14px solid white;
-  border-bottom: 10px solid transparent;
-  border-top: 10px solid transparent;
+  width: 10px;
+  height: 10px;
+  border-right: 3px solid #D22527;
+  border-bottom: 3px solid #D22527;
+  transform: rotate(135deg);
   box-sizing: border-box;
-  border-radius: 4px;
   transition: all 0.3s;
   pointer-events: none;
-}
-
-button:hover .left:after {
-  border-right: 14px solid #ccc;
+  left: 12px;
+  border-radius: 2px;
 }
 
 #startSurvey, #toTerms {
@@ -340,41 +373,42 @@ button:hover .left:after {
 }
 
 button.next-btn {
-  text-align: left;
+  /*text-align: center;*/
   position: relative;
+  border: 1px solid #D22527;
+  background-color: #D22527;
+  color: white;
 }
 
 button .right {
   width: 10px;
   height: 10px;
   position: absolute;
-  right: 12px;
-  top: 4px;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
 }
 
 button .right:after {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 23px;
-  border-left: 14px solid white;
-  border-bottom: 10px solid transparent;
-  border-top: 10px solid transparent;
+  width: 10px;
+  height: 10px;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(315deg);
   box-sizing: border-box;
-  border-radius: 4px;
   transition: all 0.3s;
   pointer-events: none;
-}
-
-button:hover .right:after {
-  border-left: 14px solid #ccc;
+  right: 12px;
+  border-radius: 2px;
 }
 
 .page .pagination-wrapper button:hover, #toTerms:hover, #startSurvey:hover, #couponLink button:hover {
   /*color: white;
   background-color: #E54C3C;*/
-  color: #ccc;
+  /*color: #ccc;*/
   cursor: pointer;
 }
 
@@ -389,12 +423,16 @@ button:hover .right:after {
 
 #resultTitle {
   font-weight: 600;
+  font-family: 'Merienda', cursive;
   padding: 0px 15px;
+  color: #D22527;
 }
 
 #resultDescription, #resultInstruction {
+  font-family: 'Merienda', cursive;
   margin-top: 10px;
   padding: 0px 15px;
+  color: #D22527;
 }
 
 #couponLink {
@@ -441,20 +479,19 @@ button:hover .right:after {
 }
 
 #toVideo {
-  margin: 20px;
-  margin-bottom: 40px;
-  background-color: #e54c3c;
-  border: none;
+  padding: 10px 30px;
+  display: block;
+  font-family: 'Merienda', cursive;
   color: white;
-  padding: 6px 15px;
-  font-size: 18px;
-  border-radius: 8px;
+  margin: 30px auto 250px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #C71610;
 }
 
 #toVideo:hover {
   cursor: pointer;
-  background-color: white;
-  color: #e54c3c;
 }
 
 .vid-wrapper {

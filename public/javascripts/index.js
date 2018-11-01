@@ -120,6 +120,7 @@ var app = {
 		}	
 	},
 	continue: function() {
+		this.changeHeaderImage();
 		var answerJson = '{}';
 		/*if (localStorage.getItem('localAnswers')) {
 			var temp = JSON.parse(localStorage.getItem('localAnswers'));
@@ -302,6 +303,7 @@ var app = {
       }
       else {
 		     this.pages.toPage('followPage');
+		     this.changeHeaderImage();
       }
     // this.continue();
     }).catch((error) => {
@@ -337,6 +339,7 @@ var app = {
 	    	}
 	    	else {
 	    		this.pages.toPage('regPage');
+	    		// this.pages.toPage('page1')
 	    		// this.enableSaveAnswer();
 	    	}
     	}
@@ -402,7 +405,7 @@ var app = {
 		/* ==== Set Questions ==== */
 	  this.q[1] = new singleAnswerQuestion({
 	  	wrapper: document.getElementById('q1'),
-	  	question: '<span class="red">QUESTION 1</span><br>Please tell me your gender.',
+	  	question: '<div class="no"><span class="big">QUESTION 1</span> <span class="small">of 6</span></div>Please tell me your gender.',
 	  	answers: [{
 	    	value: 'Male',
 	    	text: 'Male',
@@ -415,7 +418,7 @@ var app = {
 	  
 	  this.q[2] = new singleAnswerQuestion({
 	  	wrapper: document.getElementById('q2'),
-	  	question: '<span class="red">QUESTION 2</span><br>Please tell me your age.',
+	  	question: '<div class="no"><span class="big">QUESTION 2</span> <span class="small">of 6</span></div>Please tell me your age.',
 	  	answers: [{
 	    	value: 'Below 19',
 	    	text: 'Below 19',
@@ -452,7 +455,7 @@ var app = {
 
 	  this.q[3] = new dropdownQuestion({
 	  	wrapper: document.getElementById('q3'),
-	  	question: '<span class="red">QUESTION 3</span><br>Where do you live?',
+	  	question: '<div class="no"><span class="big">QUESTION 3</span> <span class="small">of 6</span></div>Where do you live?',
 	  	answers: [
 				{ value:'Argentina', text:'Argentina'},
 				{ value:'Australia', text:'Australia'},
@@ -484,7 +487,7 @@ var app = {
 
 	  this.q[4] = new singleAnswerQuestion({
 	  	wrapper: document.getElementById('q4'),
-	  	question: '<span class="red">QUESTION 4</span><br>Please tell me how often do you drink bottled green tea.',
+	  	question: '<div class="no"><span class="big">QUESTION 4</span> <span class="small">of 6</span></div>Please tell me how often do you drink bottled green tea.',
 	  	answers: [{
 	    	value: 'Almost every day',
 	    	text: 'Almost every day',
@@ -509,7 +512,7 @@ var app = {
 
 	  this.q[5] = new multipleAnswerQuestion({
 	  	wrapper: document.getElementById('q5'),
-	  	question: '<span class="red">QUESTION 5</span><br>Which type of store do you visit frequently?',
+	  	question: '<div class="no"><span class="big">QUESTION 5</span> <span class="small">of 6</span></div>Which type of store do you visit frequently?',
 	  	answers: [{
 	    	value: 'Convenience Store',
 	    	text: 'Convenience Store',
@@ -531,7 +534,7 @@ var app = {
 
 	  this.q[6] = new singleAnswerQuestion({
 	  	wrapper: document.getElementById('q6'),
-	  	question: '<span class="red">QUESTION 6</span><br>Have you heard about our coffee brand before?',
+	  	question: '<div class="no"><span class="big">QUESTION 6</span> <span class="small">of 6</span></div>Have you heard about our coffee brand before?',
 	  	answers: [{
 	    	value: 'Yes',
 	    	text: 'Yes',
@@ -580,6 +583,7 @@ var app = {
 		  user.isWanderer = true;
 	    setTimeout(() => {
 		    this.pages.toPage('regPage');
+		    // this.pages.toPage('page1')
 		    // this.pages.toPage('termsPage');
 		  }, 1000);
 	  }
@@ -617,6 +621,10 @@ var app = {
         }
       });
     }
+	},
+	changeHeaderImage() {
+    	document.getElementById('mainBanner').style.display = 'none';
+    	document.getElementById('banner').style.display = 'block';
 	}
 }
 

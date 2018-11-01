@@ -66,20 +66,53 @@
   display: none;
 }
 
-#regButtons button, #submitBtn {
-  background-color: #e54c3c;
-  border: none;
-  color: white;
-  padding: 6px 15px;
-  font-size: 18px;
-  border-radius: 6px;
+#submitBtn {
+  background-color: #C71610;
+  padding: 8px 15px;
   width: 150px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 20px auto;
+  border: none;
+  border-radius: 5px;
+  font-size: 19px;
 }
 
-#regButtons button:hover, #submitBtn:hover {
+#submitBtn:hover {
   cursor: pointer;
-  background-color: white;
-  color: #e54c3c;
+}
+
+#regButtons {
+  margin-top: 20px;
+}
+
+#regEmail, #regTwitter {
+  padding: 8px 15px;
+  width: 250px;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 0px auto 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 19px;
+}
+
+#regEmail:hover, #regTwitter:hover {
+  cursor: pointer;
+}
+
+#regEmail img, #regTwitter img {
+  width: 24px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+#regEmail {
+  background-color: #C71610;
+}
+
+#regTwitter {
+  background-color: #31AFD5;
 }
