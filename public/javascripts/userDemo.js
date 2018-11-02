@@ -298,7 +298,7 @@ var user = {
 		return new Promise(function(resolve, reject) {
 			resolve({
 				data: {
-					couponLink: "https://rmarepo.richmediaads.com/o2o/demo/en2/coupon.html",
+					couponLink: "https://s3.amazonaws.com/rmarepo/o2o/demo/payday/coupon.html",
 					message: "marked.",
 					status:true
 				}

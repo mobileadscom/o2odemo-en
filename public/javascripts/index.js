@@ -52,7 +52,11 @@ var app = {
 				document.getElementById('couponLoader').style.display = 'none';
 				document.getElementById('couponLink').href = couponLink;
 				document.getElementById('couponLink').setAttribute('target', '_blank');
-			  document.getElementById('getCoupon').innerText = 'Here is your coupon.';
+			    document.getElementById('getCoupon').innerText = 'Here is your coupon.';
+			    var x = window.matchMedia("(min-width: 992px)");
+		    	if (x.matches) {
+					document.getElementById('resultImage').style.display = 'none';
+		    	}
 			}
 		}
 		else {
@@ -334,7 +338,8 @@ var app = {
 	    		}).catch((err) => {
 	    			user.isWanderer = true;
 	    			console.log(err);
-	    			this.pages.toPage('termsPage');
+	    			this.pages.toPage('regPage');
+	    			// this.pages.toPage('termsPage');
 	    		});
 	    	}
 	    	else {
@@ -624,7 +629,10 @@ var app = {
 	},
 	changeHeaderImage() {
     	document.getElementById('mainBanner').style.display = 'none';
-    	document.getElementById('banner').style.display = 'block';
+    	var x = window.matchMedia("(min-width: 992px)");
+    	if (!x.matches) {
+			document.getElementById('banner').style.display = 'block';
+    	}
 	}
 }
 

@@ -11,7 +11,7 @@ class miniPages {
 		}
 
 		for (var p = 0; p < pages.length; p++) {
-			pages[p].style.position = 'absolute';
+			// pages[p].style.position = 'absolute';
 			pages[p].style.width = '100%';
 			// pages[p].style.height = '100%';
 			pages[p].style.display = 'none';
@@ -35,22 +35,31 @@ class miniPages {
 			var cPageIndex = this.pages.indexOf(this.currentPage.id);
 			if (toPageIndex > -1) {
 	    	var direction = toPageIndex > cPageIndex ? 1 : -1;
-	    	toPage.style.left = direction == 1 ? '100%' : '-100%';
-	      toPage.style.display = 'block';
-	      toPage.style.transition = 'all 0.3s';
-	      this.currentPage.style.transition = 'all 0.3s';
-				this.switching = true;
-				setTimeout(() => {
-          toPage.style.left = '0px';
-          this.currentPage.style.left = direction == 1 ? '-100%' : '100%';
-          setTimeout(() => {	
-          	toPage.style.transition = 'none';
-          	this.currentPage.style.transition = 'none';
-            this.currentPage.style.display = 'none';
-            this.currentPage = toPage;
-            this.switching = false;
-          }, 350);
-        }, 100);
+	    	// toPage.style.left = direction == 1 ? '30%' : '-30%';
+	    	toPage.style.transform = direction == 1 ? 'translateX(30%)' : 'translateX(-30%)';
+	    	toPage.style.opacity = '0';
+			toPage.style.display = 'block';
+			toPage.style.transition = 'all 0.3s';
+			this.currentPage.style.transition = 'all 0.3s';
+			this.currentPage.style.position = 'absolute';
+			this.switching = true;
+			setTimeout(() => {
+				// toPage.style.left = '0px';
+				toPage.style.transform = 'translateX(0)';
+				toPage.style.opacity = '1';
+				this.currentPage.style.transform = direction == 1 ? 'translateX(-30%)' : 'translateX(30%)';
+				this.currentPage.style.opacity = '0';
+				// this.currentPage.style.left = direction == 1 ? '-100%' : '100%';
+				setTimeout(() => {	
+					toPage.style.transition = 'none';
+					this.currentPage.style.transition = 'none';
+					this.currentPage.style.display = 'none';
+					this.currentPage.style.transform = 'translateX(0)';
+					this.currentPage.style.opacity = '1';
+					this.currentPage = toPage;
+					this.switching = false;
+				}, 350);
+			}, 100);
 			}
 		}
 	}

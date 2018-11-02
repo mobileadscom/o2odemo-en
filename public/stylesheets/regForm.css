@@ -49,9 +49,9 @@
   border-top: 5px solid #1DA1F2;
 }
 
-#followBtn:hover {
+/*#followBtn:hover {
   cursor: pointer;
-}
+}*/
 
 #successFollow {
   width: 200px;
@@ -87,7 +87,7 @@
   margin-top: 20px;
 }
 
-#regEmail, #regTwitter {
+#regEmail, #regTwitter, #followBtn {
   padding: 8px 15px;
   width: 250px;
   display: block;
@@ -103,7 +103,7 @@
   cursor: pointer;
 }
 
-#regEmail img, #regTwitter img {
+#regEmail img, #regTwitter img, #followBtn img {
   width: 24px;
   vertical-align: middle;
   margin-right: 15px;
@@ -113,6 +113,6 @@
   background-color: #C71610;
 }
 
-#regTwitter {
+#regTwitter, #followBtn {
   background-color: #31AFD5;
 }
