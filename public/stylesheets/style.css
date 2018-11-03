@@ -478,14 +478,14 @@ button .right:after {
   font-weight: 600;
   font-family: 'Merienda', cursive;
   padding: 0px 15px;
-  color: #D22527;
+  color: #4c4c4c;
 }
 
 #resultDescription, #resultInstruction {
   font-family: 'Merienda', cursive;
   margin-top: 10px;
   padding: 0px 15px;
-  color: #D22527;
+  color: #4c4c4c;
 }
 
 #couponLink {
