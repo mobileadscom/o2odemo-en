@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 var extractPlugin = new ExtractTextPlugin({
-	filename: 'main.css'
+    filename: '[name].css'
 })
 
 module.exports = {
@@ -13,13 +13,16 @@ module.exports = {
         inline:true,
         port: 8080
     },
-	entry: './public/javascripts/index.js',
+	entry: {
+        'index': './public/javascripts/index.js',
+        'coupon': './public/javascripts/main.js',
+    },
 	output: {
 		path: __dirname + '/public/dist',
-		filename: 'app.js',
+		filename: '[name]-[hash].js',
 		// publicPath: '/public/dist',
-	    library: 'app',
-		libraryTarget: 'var'
+	 //    library: 'app',
+		// libraryTarget: 'var'
 	},
 	module: {
 		rules: [
@@ -69,7 +72,16 @@ module.exports = {
 	plugins: [
         extractPlugin,
         new HtmlWebpackPlugin({
+            // inject: true,
+            filename: 'index.html',
+            chunks: ['index'],
             template: 'public/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            // inject: true,
+            filename: 'coupon.html',
+            chunks: ['coupon'],
+            template: 'public/coupon.html'
         }),
         new CleanWebpackPlugin(['dist'])
 	]
