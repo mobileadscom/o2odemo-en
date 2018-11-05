@@ -636,6 +636,7 @@ button .right:after {
   display: flex;
   justify-content: center;
   margin: 10px 0px;
+  max-width: 360px;
 }
 
 .steps-wrapper .step .thumbnail {
