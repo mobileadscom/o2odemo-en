@@ -38,7 +38,7 @@ var app = {
 	},
 	initResult(state, couponLink) {
 		if (state == 'win') {
-			document.getElementById('resultTitle').innerHTML = "Congratulations.";
+			document.getElementById('resultTitle').innerHTML = "Congratulations!";
 			document.getElementById('resultDescription').innerHTML = "You are qualified for our offer.";
 			if (user.isWanderer) {
 				document.getElementById('couponLink').style.display = 'none';
