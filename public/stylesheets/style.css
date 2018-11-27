@@ -31,6 +31,10 @@ div {
     margin-top: 20px;
   }
 
+  #regPage .msg-wrapper {
+    margin-top: -10px;
+  }
+
   .terms {
     height: 250px;
     font-size: 14px;
@@ -160,7 +164,11 @@ div {
     width: 50%;
     max-width: 400px;
   }
-  
+
+  #regPage .msg-wrapper {
+    margin-top: 0px;
+  }
+
   #page-wrapper {
     width: 50%;
     max-width: 400px;
@@ -225,6 +233,7 @@ div {
   position: absolute;
   top: 50%;
   right: 0px;
+  width: 100%;
   transform: translateY(-50%);
 }
 
@@ -699,4 +708,54 @@ button .right:after {
   justify-content: center;
   max-width: 1200px;
   margin: auto;
+}
+
+@media screen and (orientation:landscape) and ( max-width: 995px){
+  .banner img, #resultImage {
+    display: none !important;
+  }
+  
+  .main-banner {
+    display: block;
+    width: 50%;
+    max-width: 400px;
+  }
+  
+  #regPage .msg-wrapper {
+    margin-top: 0px;
+  }
+
+  #page-wrapper {
+    width: 50%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+  }
+
+  .page {
+    height: 100%;
+    overflow: scroll;
+  }
+
+  #mainBanner {
+    display: none;   
+  }
+
+  .vid-wrapper {
+    width: 95%;
+    height: 50%;
+  }
+
+  #resultTitle {
+    margin-top: 0px;
+  }
+
+  .page .pagination-wrapper button {
+    margin: 0px 5px;
+  }
+
+  #toVideo {
+    padding: 10px 15px;
+    margin-bottom: 100px;
+  }
 }
